@@ -1,0 +1,11 @@
+#-------------------------------------------------------------
+# Homeassistant specific
+#-------------------------------------------------------------
+
+alias mqtt_delete='mosquitto_pub -h $MQTTHOST -u $MQTTUSER27 -P $MQTTPASS27 -n -r -d -t'
+alias mqtt_listen_lights='mosquitto_sub -h $MQTTHOST -u $MQTTUSER37 -P $MQTTPASS37 -v -t '#''
+alias hadir='cd /usr/share/hassio/homeassistant/'
+alias halog='tail -f /usr/share/hassio/homeassistant/home-assistant.log'
+alias notifylog='tail -f /usr/share/hassio/homeassistant/notify.log'
+alias harestart='sudo docker restart homeassistant'
+alias hashell='sudo docker exec -it homeassistant /bin/bash'
