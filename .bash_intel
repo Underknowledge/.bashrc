@@ -1,0 +1,14 @@
+#-------------------------------------------------------------
+# example for an host called intel
+#-------------------------------------------------------------
+
+
+function lock(){
+  if [ -f /tmp/DISABLELOCK ]; then
+     echo "File exists. ENABLE LOCK"
+     rm /tmp/DISABLELOCK
+  else
+     echo "File does not exist. creating.  DISABLE LOCK"
+     touch /tmp/DISABLELOCK
+  fi
+}
